@@ -1,3 +1,5 @@
+from collections.abc import Mapping
+
 import pendulum
 import requests
 
