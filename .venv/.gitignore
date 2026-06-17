@@ -1,0 +1,7 @@
+# created by virtualenv automatically
+airflow.db
+.idea/
+logs/
+*.cfg.new
+__pycache__/
+*.pyc
