@@ -131,7 +131,8 @@ def simple_pipeline():
                 company_name TEXT,
                 employee_markme TEXT,
                 description TEXT,
-                leave_days INTEGER
+                leave_days INTEGER.
+                cust_id INTEGER
             );
         """,
         dag=dag,
