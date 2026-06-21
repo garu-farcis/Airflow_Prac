@@ -150,6 +150,7 @@ def simple_pipeline():
         print("✅ Downloaded data successfully")
 
     create_table >> download_and_insert()
+    create_table >> download_and_insert()
 
 
 simple_pipeline()
