@@ -67,3 +67,22 @@
    Problem: Design a DAG that dynamically maps tasks using TaskFlow API ( `@task.map` ) over a list pulled from S3 / database. Handle mapping limits and failure isolation.
    Sample: `files = ["2026-07-01.parquet", ..., "2026-07-31.parquet"]` → map a processing task per file."""
 
+
+from airflow.decorators import dag, task
+from airflow.providers.standard.operators.python import get_current_context
+
+@task
+def get_files():
+    # Pull from S3 or DB
+    return [f"data/{i}.parquet" for i in range(100)]
+
+@task
+def process_file(file_path: str):
+    print(f"Processing {file_path}")
+    # Spark / Pandas logic here
+    return f"done_{file_path}"
+
+@dag(schedule=None, start_date=..., catchup=False)
+def dynamic_dag():
+    files = get_files()
+    processed = process_file.expand(file_path=files)  # Dynamic mapping
