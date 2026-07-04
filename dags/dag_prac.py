@@ -104,9 +104,3 @@ wait = ExternalTaskSensor(
     timeout=3600
 )
 
-@task
-def load_to_db(**context):
-    ds = context['ds']
-    # Use INSERT ... ON CONFLICT or delete + insert for the partition
-    execute_query(f"DELETE FROM fact WHERE date = '{ds}'")
-    # Then load
