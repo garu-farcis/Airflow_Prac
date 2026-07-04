@@ -86,3 +86,27 @@ def process_file(file_path: str):
 def dynamic_dag():
     files = get_files()
     processed = process_file.expand(file_path=files)  # Dynamic mapping
+
+
+from airflow.operators.trigger_dagrun import TriggerDagRunOperator
+from airflow.sensors.external_task import ExternalTaskSensor
+
+trigger = TriggerDagRunOperator(
+    task_id='trigger_downstream',
+    trigger_dag_id='downstream_dag',
+    conf={'date': '{{ ds }}'}
+)
+
+wait = ExternalTaskSensor(
+    task_id='wait_for_downstream',
+    external_dag_id='downstream_dag',
+    external_task_id=None,  # wait for whole DAG
+    timeout=3600
+)
+
+@task
+def load_to_db(**context):
+    ds = context['ds']
+    # Use INSERT ... ON CONFLICT or delete + insert for the partition
+    execute_query(f"DELETE FROM fact WHERE date = '{ds}'")
+    # Then load
