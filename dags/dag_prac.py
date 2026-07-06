@@ -104,3 +104,30 @@ wait = ExternalTaskSensor(
     timeout=3600
 )
 
+@task
+def load_to_db(**context):
+    ds = context['ds']
+    # Use INSERT ... ON CONFLICT or delete + insert for the partition
+    execute_query(f"DELETE FROM fact WHERE date = '{ds}'")
+    # Then load
+
+from airflow.sensors.base import BaseSensorOperator
+
+class KafkaLagSensor(BaseSensorOperator):
+    def poke(self, context):
+        lag = get_kafka_lag(self.topic)
+        return lag == 0
+
+from airflow.triggers.external_task import ExternalTaskTrigger
+
+# Use Deferrable operators (Async) for long waits without occupying worker slot
+
+from airflow.triggers.external_task import ExternalTaskTrigger
+
+# Use Deferrable operators (Async) for long waits without occupying worker slot
+
+# Strategy:
+# 1. Create new_dag_v2.py with different dag_id
+# 2. Set catchup=False, max_active_runs=1 on new version
+# 3. Pause old DAG after verification
+# 4. Use Variable to control which version runs
