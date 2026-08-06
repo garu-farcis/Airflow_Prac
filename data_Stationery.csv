@@ -1,0 +1,4 @@
+order_id,customer_id,product,category,quantity,unit_price,order_date,region,status
+1007,C005,Notebook,Stationery,20,4.5,2024-01-11,North,Completed
+1010,C006,Pen Set,Stationery,15,12.99,2024-01-14,East,Completed
+1014,C005,Stapler,Stationery,8,7.5,2024-01-18,North,Cancelled

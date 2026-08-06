@@ -1,0 +1,4 @@
+order_id,customer_id,product,category,quantity,unit_price,order_date,region,status
+1004,C003,Desk Chair,Furniture,1,249.5,2024-01-08,West,Completed
+1008,C003,Bookshelf,Furniture,2,189.0,2024-01-12,West,Pending
+1012,C007,Office Desk,Furniture,1,399.0,2024-01-16,South,Pending
