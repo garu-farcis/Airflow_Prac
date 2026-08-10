@@ -1,0 +1,7 @@
+{"timestamp":"2026-08-10T13:54:01.657659Z","level":"info","event":"setup plugin alembic.autogenerate.schemas","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-08-10T13:54:01.657833Z","level":"info","event":"setup plugin alembic.autogenerate.tables","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-08-10T13:54:01.657877Z","level":"info","event":"setup plugin alembic.autogenerate.types","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-08-10T13:54:01.657913Z","level":"info","event":"setup plugin alembic.autogenerate.constraints","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-08-10T13:54:01.657945Z","level":"info","event":"setup plugin alembic.autogenerate.defaults","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-08-10T13:54:01.657978Z","level":"info","event":"setup plugin alembic.autogenerate.comments","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-08-10T13:54:10.139525Z","level":"error","event":"Process terminated by signal. For more information, see https://airflow.apache.org/docs/apache-airflow/stable/troubleshooting.html#process-terminated-by-signal.","signal":-2,"signal_name":"SIGINT","logger":"task"}

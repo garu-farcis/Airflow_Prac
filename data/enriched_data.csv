@@ -1,0 +1,11 @@
+order_id,customer_id,product,category,quantity,unit_price,order_date,region,status,total_amount
+1001,C001,Laptop,Electronics,2,899.99,2024-01-05,North,Completed,1799.98
+1002,C002,Mouse,Electronics,5,24.99,2024-01-06,South,Completed,124.94999999999999
+1004,C003,Desk Chair,Furniture,1,249.5,2024-01-08,West,Completed,249.5
+1005,C004,Monitor,Electronics,3,299.0,2024-01-09,East,Completed,897.0
+1007,C005,Notebook,Stationery,20,4.5,2024-01-11,North,Completed,90.0
+1009,C001,Headphones,Electronics,1,149.99,2024-01-13,North,Completed,149.99
+1010,C006,Pen Set,Stationery,15,12.99,2024-01-14,East,Completed,194.85
+1011,C004,Webcam,Electronics,1,89.99,2024-01-15,East,Completed,89.99
+1013,C002,Mouse Pad,Electronics,4,14.99,2024-01-17,South,Completed,59.96
+1015,C008,Laptop Stand,Electronics,2,45.0,2024-01-19,West,Completed,90.0

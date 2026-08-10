@@ -1,0 +1,2 @@
+{"timestamp":"2026-08-10T14:05:07.775384Z","level":"info","event":"setup plugin alembic.autogenerate.schemas","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-08-10T14:05:07.775535Z","level":"info","event":"setup plugin alembic.autogenerate.tables","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
