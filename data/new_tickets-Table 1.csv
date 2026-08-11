@@ -1,0 +1,5 @@
+ticket_id,customer_id,category,priority,status,created_date,resolved_date,agent_id,region,satisfaction_score
+TKT-1041,CUST-150,Technical,High,Open,2024-12-28 09:15:00,,A103,East,
+TKT-1042,CUST-112,Billing,Medium,Open,2024-12-28 11:40:00,,A101,North,
+TKT-1043,CUST-178,Shipping,Critical,In Progress,2024-12-28 14:05:00,,A105,West,
+TKT-1044,CUST-133,Account,Low,Open,2024-12-29 08:20:00,,A102,South,
