@@ -11,7 +11,7 @@ import pandas as pd
 from airflow.sdk import DAG, task,TaskGroup
 from airflow.providers.standard.operators.python import PythonOperator,get_current_context,BranchPythonOperator
 
-from dags.dag_prac5 import categories
+from dags.dag_prac5 import category
 
 file_path="/Users/prse/PycharmProjects/Airflow_Prac/data/support_tickets-Table 1.csv"
 
@@ -36,4 +36,4 @@ with DAG(
 
 )as dag:
     extract_data=extract()
-    filter_data=filter.expand(category=categories)
+    filter_data=filter.expand(category=extract_data)
