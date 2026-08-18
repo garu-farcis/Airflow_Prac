@@ -33,9 +33,8 @@ def transform(**context):
     new_df.to_csv(out_path,index=False)
     row_count=len(new_df)
     context["ti"].xcom_push(key="row_count",value=row_count)
-    return row_count
 
-def load(**context):
+def load():
     ti = get_current_context()["ti"]
     row_count=ti.xcom_pull(task_ids="transform",key="row_count")
     print(f"the row count is {row_count}")
