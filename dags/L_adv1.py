@@ -6,18 +6,18 @@
    - check_dates          → fails if created_date is in the future
    The whole group should fail if any of the three checks fail.
    After the group, add a task that prints “All quality checks passed”."""
-import pdb
+
 
 from  airflow import DAG,task
-from airflow.sdk import TaskGroup
+from airflow.sdk import TaskGroup,dag
 from airflow.providers.standard.operators.python import PythonOperator
 from datetime import timedelta,datetime
 file_path="/Users/prse/PycharmProjects/Airflow_Prac/data/support_tickets-Table 1.csv"
 import pandas as pd
 
-@DAG(
+@dag(
     dag_id="my_taskgroup_dag",
-    start_date=datetime.date(2026, 8, 1),
+    start_date=datetime(2026, 8, 1),
     schedule="0 9 * * *",
     catchup=False,
     tags=["orders"],

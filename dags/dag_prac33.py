@@ -2,7 +2,7 @@
    revenue (quantity * unit_price) per region from orders_sample.csv and writes one
    output file per region using dynamic task mapping (.expand())."""
 
-from airflow.sdk import task,DAG,TaskGroup
+from airflow.sdk import DAG,TaskGroup,task
 from airflow.providers.standard.operators.python import BranchPythonOperator,PythonOperator,get_current_context
 import pandas as pd
 import datetime
