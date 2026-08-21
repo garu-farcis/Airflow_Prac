@@ -43,5 +43,5 @@ def my_dag():
     extract=extract()
     filt_open=filter_open()
     save=save()
-
+ my_dag()
 
