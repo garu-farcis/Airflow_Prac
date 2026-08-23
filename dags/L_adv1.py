@@ -8,8 +8,8 @@
    After the group, add a task that prints “All quality checks passed”."""
 
 
-from  airflow import DAG,task
-from airflow.sdk import TaskGroup,dag
+from  airflow import DAG
+from airflow.sdk import TaskGroup,dag,task
 from airflow.providers.standard.operators.python import PythonOperator
 from datetime import timedelta,datetime
 file_path="/Users/prse/PycharmProjects/Airflow_Prac/data/support_tickets-Table 1.csv"

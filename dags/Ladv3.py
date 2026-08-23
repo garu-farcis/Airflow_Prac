@@ -5,8 +5,8 @@
    only one of those values and print it.
    (Practice multiple_outputs=True or dictionary unpacking)"""
 
-from  airflow import DAG,task
-from airflow.sdk import TaskGroup,dag
+from  airflow import DAG
+from airflow.sdk import TaskGroup,dag,task
 from airflow.providers.standard.operators.python import PythonOperator
 from datetime import timedelta,datetime
 import pandas as pd

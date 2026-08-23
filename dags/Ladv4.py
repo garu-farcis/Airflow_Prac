@@ -6,8 +6,8 @@
    - Then another @task continues after the BashOperator"""
 
 
-from  airflow import DAG,task
-from airflow.sdk import TaskGroup,dag
+from  airflow import DAG
+from airflow.sdk import TaskGroup,dag,task
 from airflow.providers.standard.operators.python import PythonOperator
 from airflow.providers.standard.operators.bash import BashOperator
 from datetime import timedelta,datetime

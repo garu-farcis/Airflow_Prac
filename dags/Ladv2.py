@@ -7,41 +7,44 @@
         save()         → saves the filtered data to data/open_tickets.csv
    - Properly chains them: extract → filter_open → save"""
 
-from  airflow import DAG,task
-from airflow.sdk import TaskGroup,dag
-from airflow.providers.standard.operators.python import PythonOperator
-from datetime import timedelta,datetime
-
-
-file_path="/Users/prse/PycharmProjects/Airflow_Prac/data/support_tickets-Table 1.csv"
-out_path="/Users/prse/PycharmProjects/Airflow_Prac/data/open_tickets.csv"
+from airflow.sdk import dag, task
+from datetime import datetime
 import pandas as pd
+
+
+file_path = "/Users/prse/PycharmProjects/Airflow_Prac/data/support_tickets-Table 1.csv"
+out_path = "/Users/prse/PycharmProjects/Airflow_Prac/data/open_tickets.csv"
+
+
 @dag(
     dag_id="etl_taskflow_api",
-    start_date=datetime(2027,9,8),
-    schedule='@daily',
+    start_date=datetime(2027, 9, 8),
+    schedule="@daily",
     catchup=False,
     tags=["taskflow"],
 )
 def my_dag():
-    @task
-    def extract(ti=None):
-        df=pd.read_csv(file_path)
-        ti.xcom_push(key='my_dict',value= df.to_dict("values"))
 
     @task
-    def filter_open(ti=None):
-        df=ti.xcom_pull(task_ids="extract",key='my_dict')
-        filtered=df[df['status']=='Open'].sum
-        ti.xcom_push(key='filtered',value=filtered)
+    def extract():
+        df = pd.read_csv(file_path)
+        return df
+
     @task
-    def save(ti=None):
-        df=ti.xcom_pull(task_ids="filt_open",key='filtered')
-        df.to_csv(out_path,index_label=False)
+    def filter_open(df):
+        filtered = df[df["status"] == "Open"]
+        return filtered
+
+    @task
+    def save(df):
+        df.to_csv(out_path, index=False)
+
+    # TaskFlow automatically creates the dependency:
+    # extract → filter_open → save
+    data = extract()
+    open_tickets = filter_open(data)
+    save(open_tickets)
 
 
-    extract=extract()
-    filt_open=filter_open()
-    save=save()
- my_dag()
+my_dag()
 
