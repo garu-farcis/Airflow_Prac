@@ -1,0 +1,2 @@
+{"timestamp":"2026-08-23T23:36:50.037124Z","level":"info","event":"Filling up the DagBag from /Users/prse/PycharmProjects/Airflow_Prac/dags/dag11.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-08-23T23:37:51.479752Z","level":"info","event":"Filling up the DagBag from /Users/prse/PycharmProjects/Airflow_Prac/dags/dag11.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}

@@ -1,0 +1,13 @@
+{"timestamp":"2026-08-23T23:38:00.719139Z","level":"info","event":"setup plugin alembic.autogenerate.schemas","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-08-23T23:38:00.719280Z","level":"info","event":"setup plugin alembic.autogenerate.tables","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-08-23T23:38:00.719323Z","level":"info","event":"setup plugin alembic.autogenerate.types","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-08-23T23:38:00.719359Z","level":"info","event":"setup plugin alembic.autogenerate.constraints","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-08-23T23:38:00.719395Z","level":"info","event":"setup plugin alembic.autogenerate.defaults","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-08-23T23:38:00.719426Z","level":"info","event":"setup plugin alembic.autogenerate.comments","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-08-23T23:38:00.803572Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-08-23T23:38:00.803979Z","level":"info","event":"Filling up the DagBag from /Users/prse/PycharmProjects/Airflow_Prac/dags/dag_prac15.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-08-23T23:38:01.200519Z","level":"info","event":"North 2039.97","logger":"task.stdout"}
+{"timestamp":"2026-08-23T23:38:01.203601Z","level":"info","event":"South 184.91","logger":"task.stdout"}
+{"timestamp":"2026-08-23T23:38:01.206494Z","level":"info","event":"West 339.5","logger":"task.stdout"}
+{"timestamp":"2026-08-23T23:38:01.209334Z","level":"info","event":"East 1181.84","logger":"task.stdout"}
+{"timestamp":"2026-08-23T23:38:01.212444Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":229}
