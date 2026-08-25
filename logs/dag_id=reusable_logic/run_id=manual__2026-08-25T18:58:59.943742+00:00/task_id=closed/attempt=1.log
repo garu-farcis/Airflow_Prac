@@ -1,0 +1,22 @@
+{"timestamp":"2026-08-25T18:59:11.561929Z","level":"info","event":"setup plugin alembic.autogenerate.schemas","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-08-25T18:59:11.562101Z","level":"info","event":"setup plugin alembic.autogenerate.tables","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-08-25T18:59:11.562251Z","level":"info","event":"setup plugin alembic.autogenerate.types","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-08-25T18:59:11.562455Z","level":"info","event":"setup plugin alembic.autogenerate.constraints","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-08-25T18:59:11.562523Z","level":"info","event":"setup plugin alembic.autogenerate.defaults","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-08-25T18:59:11.562570Z","level":"info","event":"setup plugin alembic.autogenerate.comments","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-08-25T18:59:11.678851Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-08-25T18:59:11.679224Z","level":"info","event":"Filling up the DagBag from /Users/prse/PycharmProjects/Airflow_Prac/dags/Ladv7.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-08-25T18:59:12.104410Z","level":"info","event":"closed status data is    True ticket_id customer_id  ... agent_id   region satisfaction_score","logger":"task.stdout"}
+{"timestamp":"2026-08-25T18:59:12.104577Z","level":"info","event":"0     9  TKT-1010    CUST-120  ...     A102     East                1.0","logger":"task.stdout"}
+{"timestamp":"2026-08-25T18:59:12.104631Z","level":"info","event":"1    12  TKT-1013    CUST-108  ...     A102     West                4.0","logger":"task.stdout"}
+{"timestamp":"2026-08-25T18:59:12.104684Z","level":"info","event":"2    13  TKT-1014    CUST-133  ...     A106  Central                5.0","logger":"task.stdout"}
+{"timestamp":"2026-08-25T18:59:12.104728Z","level":"info","event":"3    15  TKT-1016    CUST-196  ...     A102    South                4.0","logger":"task.stdout"}
+{"timestamp":"2026-08-25T18:59:12.104769Z","level":"info","event":"4    16  TKT-1017    CUST-176  ...     A105    North                1.0","logger":"task.stdout"}
+{"timestamp":"2026-08-25T18:59:12.104811Z","level":"info","event":"5    22  TKT-1023    CUST-121  ...     A102  Central                2.0","logger":"task.stdout"}
+{"timestamp":"2026-08-25T18:59:12.104853Z","level":"info","event":"6    23  TKT-1024    CUST-156  ...     A101    South                2.0","logger":"task.stdout"}
+{"timestamp":"2026-08-25T18:59:12.104895Z","level":"info","event":"7    27  TKT-1028    CUST-124  ...     A106     West                3.0","logger":"task.stdout"}
+{"timestamp":"2026-08-25T18:59:12.104935Z","level":"info","event":"8    28  TKT-1029    CUST-186  ...     A104     East                1.0","logger":"task.stdout"}
+{"timestamp":"2026-08-25T18:59:12.104977Z","level":"info","event":"9    32  TKT-1033    CUST-121  ...     A104     East                4.0","logger":"task.stdout"}
+{"timestamp":"2026-08-25T18:59:12.105016Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-08-25T18:59:12.105058Z","level":"info","event":"[10 rows x 11 columns] and file_path is /Users/prse/PycharmProjects/Airflow_Prac/data/closed.csv","logger":"task.stdout"}
+{"timestamp":"2026-08-25T18:59:12.104322Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":229}

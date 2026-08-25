@@ -1,0 +1,41 @@
+ticket_id,customer_id,category,priority,status,created_date,resolved_date,agent_id,region,satisfaction_score,is_critical
+TKT-1001,CUST-194,Account,Medium,Open,2024-12-11 03:00:00,,A102,South,,False
+TKT-1002,CUST-111,Product,Critical,Escalated,2024-12-18 03:00:00,,A101,North,,False
+TKT-1003,CUST-164,Product,Low,In Progress,2024-11-06 06:00:00,,A105,South,,False
+TKT-1004,CUST-153,Technical,Critical,Escalated,2024-12-16 20:00:00,,A105,East,,False
+TKT-1005,CUST-189,Shipping,High,In Progress,2024-12-22 00:00:00,,A103,South,,False
+TKT-1006,CUST-111,Shipping,Low,Open,2024-11-14 10:00:00,,A103,East,,False
+TKT-1007,CUST-193,Shipping,Low,Open,2024-12-09 08:00:00,,A104,North,,False
+TKT-1008,CUST-146,Product,Medium,Escalated,2024-12-06 09:00:00,,A106,North,,False
+TKT-1009,CUST-198,Account,Low,In Progress,2024-11-03 21:00:00,,A102,North,,False
+TKT-1010,CUST-120,Account,High,Closed,2024-11-25 08:00:00,2024-11-27 08:00:00,A102,East,1.0,False
+TKT-1011,CUST-168,Technical,Medium,In Progress,2024-12-09 20:00:00,,A104,West,,False
+TKT-1012,CUST-128,Account,Low,Escalated,2024-11-18 20:00:00,,A102,North,,False
+TKT-1013,CUST-108,Technical,High,Closed,2024-12-22 10:00:00,2024-12-23 22:00:00,A102,West,4.0,False
+TKT-1014,CUST-133,Technical,Medium,Closed,2024-12-27 20:00:00,2024-12-28 16:00:00,A106,Central,5.0,False
+TKT-1015,CUST-154,Product,Critical,Escalated,2024-11-17 23:00:00,,A103,South,,False
+TKT-1016,CUST-196,Billing,Low,Closed,2024-11-09 16:00:00,2024-11-10 05:00:00,A102,South,4.0,False
+TKT-1017,CUST-176,Shipping,High,Closed,2024-12-09 02:00:00,2024-12-11 04:00:00,A105,North,1.0,False
+TKT-1018,CUST-114,Account,Critical,Resolved,2024-12-14 17:00:00,2024-12-16 14:00:00,A102,West,1.0,False
+TKT-1019,CUST-197,Technical,Low,Resolved,2024-12-17 23:00:00,2024-12-20 17:00:00,A106,East,5.0,False
+TKT-1020,CUST-147,Technical,Low,In Progress,2024-12-09 06:00:00,,A105,East,,False
+TKT-1021,CUST-146,Account,Medium,Open,2024-12-02 00:00:00,,A101,South,,False
+TKT-1022,CUST-110,Shipping,Low,Open,2024-12-27 18:00:00,,A105,South,,False
+TKT-1023,CUST-121,Account,Critical,Closed,2024-11-09 21:00:00,2024-11-12 21:00:00,A102,Central,2.0,False
+TKT-1024,CUST-156,Product,Critical,Closed,2024-12-16 09:00:00,2024-12-18 10:00:00,A101,South,2.0,False
+TKT-1025,CUST-175,Product,Medium,Open,2024-11-05 10:00:00,,A105,South,,False
+TKT-1026,CUST-129,Billing,Low,Open,2024-11-01 02:00:00,,A103,North,,False
+TKT-1027,CUST-127,Product,Medium,Resolved,2024-12-03 07:00:00,2024-12-05 23:00:00,A106,Central,5.0,False
+TKT-1028,CUST-124,Billing,Low,Closed,2024-12-01 07:00:00,2024-12-03 13:00:00,A106,West,3.0,False
+TKT-1029,CUST-186,Billing,Low,Closed,2024-11-28 13:00:00,2024-11-28 21:00:00,A104,East,1.0,False
+TKT-1030,CUST-168,Shipping,Medium,In Progress,2024-11-16 06:00:00,,A104,South,,False
+TKT-1031,CUST-109,Shipping,Low,In Progress,2024-11-18 14:00:00,,A101,Central,,False
+TKT-1032,CUST-196,Technical,Medium,Open,2024-12-24 00:00:00,,A104,West,,False
+TKT-1033,CUST-121,Shipping,Low,Closed,2024-12-01 06:00:00,2024-12-01 15:00:00,A104,East,4.0,False
+TKT-1034,CUST-184,Shipping,Medium,Escalated,2024-11-19 13:00:00,,A102,East,,False
+TKT-1035,CUST-194,Product,Low,Escalated,2024-11-14 01:00:00,,A106,East,,False
+TKT-1036,CUST-161,Product,Medium,Escalated,2024-11-04 01:00:00,,A101,Central,,False
+TKT-1037,CUST-176,Billing,Medium,Open,2024-11-06 05:00:00,,A104,North,,False
+TKT-1038,CUST-174,Product,Low,In Progress,2024-12-31 18:00:00,,A105,North,,False
+TKT-1039,CUST-172,Product,High,Escalated,2024-11-27 21:00:00,,A103,South,,False
+TKT-1040,CUST-133,Shipping,Medium,Resolved,2024-12-13 22:00:00,2024-12-15 06:00:00,A106,East,4.0,False

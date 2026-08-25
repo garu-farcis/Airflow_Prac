@@ -32,12 +32,12 @@ def my_dag():
     @task(multiple_outputs=True)
     def filter_by_status():
         df=pd.read_csv(file_path)
-        stat_open=df[df['Status']=='Open']
-        col_open=stat_open.to_csv("/Users/prse/PycharmProjects/Airflow_Prac/data/open.csv",index_label=True)
-        stat_close=df[df['Status']=='Closed']
-        col_closed=stat_close.to_csv("/Users/prse/PycharmProjects/Airflow_Prac/data/closed.csv",index_label=True)
-        stat_esc=df[df['Status']=='Escalated']
-        col_escalated=stat_esc.to_csv("/Users/prse/PycharmProjects/Airflow_Prac/data/escalated.csv",index_label=True)
+        stat_open=df[df['status']=='Open']
+        stat_open.to_csv("/Users/prse/PycharmProjects/Airflow_Prac/data/open.csv",index_label=True)
+        stat_close=df[df['status']=='Closed']
+        stat_close.to_csv("/Users/prse/PycharmProjects/Airflow_Prac/data/closed.csv",index_label=True)
+        stat_esc=df[df['status']=='Escalated']
+        stat_esc.to_csv("/Users/prse/PycharmProjects/Airflow_Prac/data/escalated.csv",index_label=True)
         return {
             "col_o":"/Users/prse/PycharmProjects/Airflow_Prac/data/open.csv",
             "col_c":"/Users/prse/PycharmProjects/Airflow_Prac/data/closed.csv",
@@ -62,7 +62,5 @@ def my_dag():
     op=open(filter_d["col_o"])
     cl=closed(filter_d["col_c"])
     esc_d=esc(filter_d["col_esc"])
-
-    filter_d>>op>>cl>>esc_d
 
 my_dag()

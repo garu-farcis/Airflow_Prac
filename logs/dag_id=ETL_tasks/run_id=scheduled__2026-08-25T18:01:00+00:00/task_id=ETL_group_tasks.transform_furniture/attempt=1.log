@@ -1,0 +1,25 @@
+{"timestamp":"2026-08-25T18:02:48.525164Z","level":"info","event":"setup plugin alembic.autogenerate.schemas","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-08-25T18:02:48.525294Z","level":"info","event":"setup plugin alembic.autogenerate.tables","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-08-25T18:02:48.525336Z","level":"info","event":"setup plugin alembic.autogenerate.types","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-08-25T18:02:48.525370Z","level":"info","event":"setup plugin alembic.autogenerate.constraints","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-08-25T18:02:48.525404Z","level":"info","event":"setup plugin alembic.autogenerate.defaults","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-08-25T18:02:48.525436Z","level":"info","event":"setup plugin alembic.autogenerate.comments","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-08-25T18:02:48.605039Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-08-25T18:02:48.605430Z","level":"info","event":"Filling up the DagBag from /Users/prse/PycharmProjects/Airflow_Prac/dags/dag_prac6.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-08-25T18:02:48.993858Z","level":"info","event":"0     False","logger":"task.stdout"}
+{"timestamp":"2026-08-25T18:02:48.993985Z","level":"info","event":"1     False","logger":"task.stdout"}
+{"timestamp":"2026-08-25T18:02:48.994036Z","level":"info","event":"2     False","logger":"task.stdout"}
+{"timestamp":"2026-08-25T18:02:48.994077Z","level":"info","event":"3      True","logger":"task.stdout"}
+{"timestamp":"2026-08-25T18:02:48.994117Z","level":"info","event":"4     False","logger":"task.stdout"}
+{"timestamp":"2026-08-25T18:02:48.994160Z","level":"info","event":"5     False","logger":"task.stdout"}
+{"timestamp":"2026-08-25T18:02:48.994201Z","level":"info","event":"6     False","logger":"task.stdout"}
+{"timestamp":"2026-08-25T18:02:48.994239Z","level":"info","event":"7      True","logger":"task.stdout"}
+{"timestamp":"2026-08-25T18:02:48.994282Z","level":"info","event":"8     False","logger":"task.stdout"}
+{"timestamp":"2026-08-25T18:02:48.994319Z","level":"info","event":"9     False","logger":"task.stdout"}
+{"timestamp":"2026-08-25T18:02:48.994360Z","level":"info","event":"10    False","logger":"task.stdout"}
+{"timestamp":"2026-08-25T18:02:48.994398Z","level":"info","event":"11     True","logger":"task.stdout"}
+{"timestamp":"2026-08-25T18:02:48.994438Z","level":"info","event":"12    False","logger":"task.stdout"}
+{"timestamp":"2026-08-25T18:02:48.994476Z","level":"info","event":"13    False","logger":"task.stdout"}
+{"timestamp":"2026-08-25T18:02:48.994513Z","level":"info","event":"14    False","logger":"task.stdout"}
+{"timestamp":"2026-08-25T18:02:48.994550Z","level":"info","event":"Name: category, dtype: bool","logger":"task.stdout"}
+{"timestamp":"2026-08-25T18:02:48.993838Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}

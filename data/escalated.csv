@@ -1,0 +1,10 @@
+True,ticket_id,customer_id,category,priority,status,created_date,resolved_date,agent_id,region,satisfaction_score
+1,TKT-1002,CUST-111,Product,Critical,Escalated,2024-12-18 03:00:00,,A101,North,
+3,TKT-1004,CUST-153,Technical,Critical,Escalated,2024-12-16 20:00:00,,A105,East,
+7,TKT-1008,CUST-146,Product,Medium,Escalated,2024-12-06 09:00:00,,A106,North,
+11,TKT-1012,CUST-128,Account,Low,Escalated,2024-11-18 20:00:00,,A102,North,
+14,TKT-1015,CUST-154,Product,Critical,Escalated,2024-11-17 23:00:00,,A103,South,
+33,TKT-1034,CUST-184,Shipping,Medium,Escalated,2024-11-19 13:00:00,,A102,East,
+34,TKT-1035,CUST-194,Product,Low,Escalated,2024-11-14 01:00:00,,A106,East,
+35,TKT-1036,CUST-161,Product,Medium,Escalated,2024-11-04 01:00:00,,A101,Central,
+38,TKT-1039,CUST-172,Product,High,Escalated,2024-11-27 21:00:00,,A103,South,

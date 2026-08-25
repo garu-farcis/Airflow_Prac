@@ -1,0 +1,1 @@
+{"timestamp":"2026-08-25T18:54:15.679042Z","level":"error","event":"Process terminated by signal. For more information, see https://airflow.apache.org/docs/apache-airflow/stable/troubleshooting.html#process-terminated-by-signal.","signal":-2,"signal_name":"SIGINT","logger":"task"}
