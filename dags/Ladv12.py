@@ -26,7 +26,7 @@ class excel_hook:
         return df
 
 @dag(
-    dag_id="Custom Hook_PythonOperator",
+    dag_id="Custom_Hook_PythonOperator",
     start_date=datetime(2026,8,7),
     schedule="@daily",
     catchup=False,

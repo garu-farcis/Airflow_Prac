@@ -19,7 +19,7 @@ from datetime import timedelta
 file_path="/Users/prse/PycharmProjects/Airflow_Prac/data/support_tickets.xlsx"
 
 @dag(
-    dag_id="SqliteHook_TaskFlow API",
+    dag_id="SqliteHook_TaskFlow_API",
     start_date=datetime(2026,8,7),
     schedule="@daily",
     catchup=False,
