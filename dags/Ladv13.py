@@ -17,7 +17,7 @@ from datetime import timedelta
 
 fil_path="/Users/prse/PycharmProjects/Airflow_Prac/data/support_tickets.xlsx"
 @dag(
-    dag_id="HttpHook_(or_requests_via_Python)_+_sensor-style_check",
+    dag_id="HttpHook_or_requests_via_Python_sensor_style_check",
     start_date=datetime.datetime(2027,3,5),
     schedule="@daily",
     catchup=False,

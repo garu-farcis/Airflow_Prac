@@ -37,7 +37,7 @@ def load_csv():
 
 with DAG(
     dag_id="BashOperator_SqliteHook_combination",
-    start_date=datetime.date(2026,8,7),
+    start_date=datetime.datetime(2026,8,7),
     schedule="@daily",
     catchup=False,
     tags=['hooks'],

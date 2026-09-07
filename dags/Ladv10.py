@@ -60,7 +60,7 @@ def task_coll():
     ti.xcom_push(key='entire_summary',value=count)
     return count
 
-with dag (
+with DAG (
         dag_id="sqlite_hook",
         start_date=datetime(2027, 8, 9),
         schedule="@daily",

@@ -1,0 +1,10 @@
+{"timestamp":"2026-09-07T16:20:32.054456Z","level":"info","event":"setup plugin alembic.autogenerate.schemas","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-09-07T16:20:32.054579Z","level":"info","event":"setup plugin alembic.autogenerate.tables","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-09-07T16:20:32.054620Z","level":"info","event":"setup plugin alembic.autogenerate.types","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-09-07T16:20:32.054655Z","level":"info","event":"setup plugin alembic.autogenerate.constraints","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-09-07T16:20:32.054693Z","level":"info","event":"setup plugin alembic.autogenerate.defaults","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-09-07T16:20:32.054722Z","level":"info","event":"setup plugin alembic.autogenerate.comments","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-09-07T16:20:32.133978Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-09-07T16:20:32.134385Z","level":"info","event":"Filling up the DagBag from /Users/prse/PycharmProjects/Airflow_Prac/dags/Ladv3.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-09-07T16:20:32.558762Z","level":"info","event":"open_count is 9","logger":"task.stdout"}
+{"timestamp":"2026-09-07T16:20:32.558659Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":229}

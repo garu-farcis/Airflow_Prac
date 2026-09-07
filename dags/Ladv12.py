@@ -27,7 +27,7 @@ class excel_hook:
 
 @dag(
     dag_id="Custom_Hook_PythonOperator",
-    start_date=datetime(2026,8,7),
+    start_date=datetime.datetime(2026,8,7),
     schedule="@daily",
     catchup=False,
     tags=['hooks'],

@@ -19,8 +19,6 @@ from airflow.providers.standard.operators.bash import BashOperator
 from datetime import timedelta,datetime
 import pandas as pd
 
-from dags.dag_prac10 import failure_callback
-
 file_path="/Users/prse/PycharmProjects/Airflow_Prac/data/support_tickets-Table 1.csv"
 out_path= "/Users/prse/PycharmProjects/Airflow_Prac/data/cleaned_tickets.csv"
 
@@ -52,7 +50,7 @@ def my_dag():
         print(f"Enriched: {df['is_critical'].sum()} critical tickets")
         return file_p
 
-    @task(on_failure_callback=failure_callback)
+    @task
     def load(file_p: str) -> str:
         """Save final cleaned data as parquet (or csv)."""
         df = pd.read_csv(file_p)
