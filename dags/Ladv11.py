@@ -48,7 +48,7 @@ def my_dag():
     @task
     def count_stats():
         hook=SqliteHook(sqlite_conn_id='mysqlite')
-        count=hook.get_first("""select count(*) from ticket_summary""")
+        count=hook.get_first("""select count(*) from ticket_summary """)
         res=count[0]
         print(res)
         return res
