@@ -30,10 +30,10 @@ def my_dag():
     def make_conn():
         hook=HttpHook(
             method='GET',
-            http_conn_id="https://httpbin.org/get"
+            http_conn_id="httpbin_default"
         )
         response=hook.run(
-            endpoint='users'
+            endpoint='get'
         )
         if response.status_code == 200:
             return PokeReturnValue(
