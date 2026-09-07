@@ -40,7 +40,7 @@ def my_dag():
     @task(retries=2)
     def clean(file_p:str)->str:
         df=pd.read_csv(file_p)
-        clean=(pd.dropna(df[df['ticket_id'].isna()])) and (pd.dropna(df[df['status'].isna()]))
+        clean=pd.dropna(subset=["ticket_id", "status"])
         clean.to_csv(out_path,index=False)
         return out_path
     @task
