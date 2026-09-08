@@ -28,14 +28,13 @@ class NewCriticalTicketSensor(BaseSensorOperator):
 
 
     def poke(self,context):
-        min_count=1
         if os.path.exists(self.file_path):
             df = pd.read_excel(self.file_path)
             if self.priority is not None:
                 df=df[df['priority']==self.priority]
             if self.status is not None:
                 df=df[df['status']].isin(self.status)
-            if len(df)>=min_count:
+            if len(df)>=self.min_count:
                 return True
         return False
 
