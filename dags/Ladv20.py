@@ -28,6 +28,7 @@ class WaitForCriticalTicketsTrigger(BaseEventTrigger):
         self.status=status
         self.priority=priority
         self.threshold=threshold
+
     async def run(self):
         while True:
             file_paths=self.file_path
