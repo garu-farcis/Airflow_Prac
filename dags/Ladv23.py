@@ -74,7 +74,7 @@ def my_dag2():
                 ticket_count INTEGER
         )
         """)
-        return {'file_path':file_path}
+        return file_path
     @task
     def agg_data(file_path):
         df = pd.read_excel(file_path)
