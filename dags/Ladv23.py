@@ -49,14 +49,14 @@ def my_dag1():
     r=read()
     f=filt_data(r)
 
-    update_asset = Asset(r)
+    # update_asset = Asset(r)
     r>>f
 my_dag1()
 
 @dag(
     dag_id='Producer/Consumer_DAG',
     start_date=datetime.datetime(2026,9,10),
-    schedule=[],
+    schedule=[ticket_data],
     catchup=False,
     tags=['hooks'],
 )
