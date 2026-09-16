@@ -80,6 +80,7 @@ def my_dag2():
         df = pd.read_excel(file_path)
         data_agg = ( df.groupby(["agent_id", "region"]) .size() .reset_index(name="ticket_count") )
         return {'data_agg':data_agg.to_dict("records")}
+
     @task
     def write_res(data):
         data_agg=pd.DataFrame(data['data_agg'])
