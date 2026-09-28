@@ -1,7 +1,4 @@
-"""
-Spanner ETL pipeline – Airflow 3.x (Task SDK) compatible
-Works with apache-airflow-providers-google >= 22.x
-"""
+
 from __future__ import annotations
 
 from datetime import datetime, timedelta
