@@ -1,0 +1,81 @@
+# Copyright 2026 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+"""The agentplatform module."""
+
+import importlib
+import sys
+
+try:
+    from google.cloud.aiplatform import init
+except ImportError:
+    init = None
+
+try:
+    from google.cloud.aiplatform import version as aiplatform_version
+
+    __version__ = aiplatform_version.__version__
+except ImportError:
+    from .version import __version__  # noqa: F401
+
+_genai_client = None
+_genai_types = None
+
+
+def __getattr__(name):  # type: ignore[no-untyped-def]
+    # Lazy importing the preview submodule
+    # See https://peps.python.org/pep-0562/
+    if name == "preview":
+        # We need to import carefully to avoid `RecursionError`.
+        # This won't work since it causes `RecursionError`:
+        # `from agentplatform import preview`
+        # This won't work due to Copybara lacking a transform:
+        # `import google.cloud.aiplatform.agentplatform.preview as`
+        #    `agentplatform_preview`
+        return importlib.import_module(".preview", __name__)
+    if name == "Client":
+        global _genai_client
+        if _genai_client is None:
+            _genai_client = importlib.import_module("._genai.client", __name__)
+        return getattr(_genai_client, name)
+
+    if name == "types":
+        global _genai_types
+        if _genai_types is None:
+            _genai_types = importlib.import_module("._genai.types", __name__)
+        # `types` is an alias for `._genai.types` rather than a real submodule,
+        # so register it to keep
+        # `from agentplatform.types import TypeName`
+        # working without a prior attribute access. Spell it the google3 way:
+        # Copybara rewrites that prefix in both directions, and the external
+        # spelling fails its reversibility check. This key was `vertexai.types`,
+        # which both misnamed this package's own alias and shadowed the real
+        # `vertexai.types` module.
+        types_module_name = f"{__name__}.types"
+        if types_module_name not in sys.modules:
+            sys.modules[types_module_name] = _genai_types
+        return _genai_types
+
+    raise AttributeError(f"module '{__name__}' has no attribute '{name}'")
+
+
+__all__ = [
+    "init",
+    "preview",
+    "Client",
+    "types",
+]
+
+if init is None:
+    __all__.remove("init")
