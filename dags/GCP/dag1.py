@@ -19,6 +19,9 @@ DATABASE_ID = "{{ var.value.spanner_database_id }}"
 
 DEFAULT_ARGS = {
     "owner": "data-engineering",
+    "depends_on_past": False,
+    "email_on_failure": True,
+    "email": ["data-alerts@yxyz.com"],
     "retries": 2,
     "retry_delay": timedelta(minutes=5),
     "retry_exponential_backoff": True,
