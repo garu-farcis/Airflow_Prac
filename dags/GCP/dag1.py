@@ -1,4 +1,3 @@
-
 from __future__ import annotations
 
 from datetime import datetime, timedelta
@@ -12,6 +11,7 @@ from airflow.providers.google.cloud.operators.spanner import (
     SpannerQueryDatabaseInstanceOperator,
 )
 from google.cloud.spanner_v1 import param_types
+
 GCP_CONN_ID = "google_cloud_default"
 PROJECT_ID = "{{ var.value.gcp_project_id }}"
 INSTANCE_ID = "{{ var.value.spanner_instance_id }}"
