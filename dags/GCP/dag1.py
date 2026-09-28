@@ -12,10 +12,6 @@ from airflow.providers.google.cloud.operators.spanner import (
     SpannerQueryDatabaseInstanceOperator,
 )
 from google.cloud.spanner_v1 import param_types
-
-# ---------------------------------------------------------------------------
-# Configuration
-# ---------------------------------------------------------------------------
 GCP_CONN_ID = "google_cloud_default"
 PROJECT_ID = "{{ var.value.gcp_project_id }}"
 INSTANCE_ID = "{{ var.value.spanner_instance_id }}"
@@ -42,9 +38,6 @@ def spanner_etl():
     start = EmptyOperator(task_id="start")
     end = EmptyOperator(task_id="end", trigger_rule=TriggerRule.ALL_DONE)
 
-    # -----------------------------------------------------------------------
-    # EXTRACT
-    # -----------------------------------------------------------------------
     @task(task_id="extract_orders")
     def extract_orders() -> list[dict[str, Any]]:
         """Pull incremental data from Spanner using SpannerHook + snapshot."""
@@ -74,9 +67,7 @@ def spanner_etl():
         print(f"Extracted {len(rows)} rows")
         return rows
 
-    # -----------------------------------------------------------------------
-    # TRANSFORM
-    # -----------------------------------------------------------------------
+
     @task(task_id="transform_orders")
     def transform_orders(raw_rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
         if not raw_rows:
@@ -99,9 +90,7 @@ def spanner_etl():
         print(f"Transformed {len(transformed)} rows")
         return transformed
 
-    # -----------------------------------------------------------------------
-    # LOAD
-    # -----------------------------------------------------------------------
+
     @task_group(group_id="load")
     def load_group(transformed_rows: list[dict[str, Any]]):
 
@@ -167,9 +156,7 @@ def spanner_etl():
         loaded >> cleanup
         return loaded
 
-    # -----------------------------------------------------------------------
-    # DATA QUALITY
-    # -----------------------------------------------------------------------
+
     @task(task_id="data_quality")
     def data_quality_check():
         hook = SpannerHook(gcp_conn_id=GCP_CONN_ID)
@@ -194,9 +181,7 @@ def spanner_etl():
             )
         return "dq_passed"
 
-    # -----------------------------------------------------------------------
-    # Wiring
-    # -----------------------------------------------------------------------
+
     extracted = extract_orders()
     transformed = transform_orders(extracted)
     loaded = load_group(transformed)
