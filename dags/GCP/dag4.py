@@ -72,3 +72,5 @@ with DAG(
                     columns=columns_to_save,
                     values=vals_to_save
                 )
+
+    create_schema>>extract
