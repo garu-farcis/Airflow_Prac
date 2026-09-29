@@ -56,6 +56,7 @@ def myspanner_dag():
         instance=client.instance(instance_id=INSTANCE_ID)
         database=instance.database(database_id=DATABASE_ID)
         query="""select * from customer_info"""
+        watermark_var = "customer_scd_watermark"
         with database.snapshot() as snapshot:
             results=snapshot.execute_sql(query)
             rows=list(results)
