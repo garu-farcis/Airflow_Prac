@@ -5,14 +5,6 @@
    - Close previous version (set end_date + is_current = false)
    - Insert new version with commit timestamp
    - Keep history queryable by effective date"""
-"""SCD Type 2 Implementation in Spanner
-   Create a pipeline that maintains Slowly Changing Dimension Type 2:
-   - Source system sends daily customer snapshots
-   - Detect changes (name, address, status)
-   - Close previous version (set end_date + is_current = false)
-   - Insert new version with commit timestamp
-   - Keep history queryable by effective date
-"""
 
 from datetime import datetime, timedelta
 
