@@ -38,7 +38,6 @@ def myspanner_dag():
     spanner_instance=SpannerDeployInstanceOperator(
         task_id='spanner_inst',
         gcp_conn_id=GCP_CONN_ID,
-        default_args=DEFAULT_ARGS,
         configuration_name="regional-us-central1",
         node_count=1,
     )
