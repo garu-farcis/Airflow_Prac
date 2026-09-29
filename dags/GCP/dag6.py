@@ -8,7 +8,7 @@
 
 
 from datetime import datetime,timedelta
-from airflow.sdk import dag,task,Variable
+from airflow.sdk import dag,task
 from airflow.providers.google.cloud.hooks.spanner import SpannerHook
 from airflow.providers.google.cloud.operators.bigquery import BigQueryHook
 from airflow.providers.google.cloud.transfers.gcs_to_bigquery import GCSToBigQueryOperator
@@ -65,6 +65,7 @@ def myspanner_dag():
 
     @task(task_id='write_data')
     def write_data(transaction,data_dict):
+        from airflow.models import Variable
         project_id=Variable.get('project_id')
         instance_id = Variable.get("gcp_instance_id")
         database_id = Variable.get("gcp_database_id")
