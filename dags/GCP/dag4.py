@@ -28,7 +28,7 @@ with DAG(
         gcp_conn_id=GCP_CONN_ID,
         instance_id=INSTANCE_ID,
         database_id=DATABASE_ID,
-        ddl_statements="""
+        ddl_statements=["""
         create table if not exists cust_metrics(
         cust_id int64 not null,
         cust_name string(30),
@@ -36,13 +36,14 @@ with DAG(
         total_amount int64,
         last_updated timestamp not null options(allow_commit_timestamp=True)
         
-        ) primary key(cust_id)"""
+        ) primary key(cust_id)"""],
     )
 
     @task
     def extract():
         hook=SpannerHook(gcp_conn_id=GCP_CONN_ID)
-        client=hook.get_client()
+        project_id = hook.project_id
+        client=hook.get_client(project_id=project_id)
         instance=client.instance(INSTANCE_ID)
         database=instance.database(DATABASE_ID)
         query='select * from cust_metrics'
