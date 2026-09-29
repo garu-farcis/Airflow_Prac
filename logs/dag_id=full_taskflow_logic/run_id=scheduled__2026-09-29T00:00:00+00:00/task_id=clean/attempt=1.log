@@ -1,0 +1,53 @@
+{"timestamp":"2026-09-29T16:13:48.330302Z","level":"info","event":"setup plugin alembic.autogenerate.schemas","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-09-29T16:13:48.330449Z","level":"info","event":"setup plugin alembic.autogenerate.tables","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-09-29T16:13:48.330492Z","level":"info","event":"setup plugin alembic.autogenerate.types","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-09-29T16:13:48.330528Z","level":"info","event":"setup plugin alembic.autogenerate.constraints","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-09-29T16:13:48.330563Z","level":"info","event":"setup plugin alembic.autogenerate.defaults","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-09-29T16:13:48.330595Z","level":"info","event":"setup plugin alembic.autogenerate.comments","logger":"alembic.runtime.plugins","filename":"plugins.py","lineno":37}
+{"timestamp":"2026-09-29T16:13:48.407009Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-09-29T16:13:48.407391Z","level":"info","event":"Filling up the DagBag from /Users/prse/PycharmProjects/Airflow_Prac/dags/Ladv8.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-09-29T16:13:49.136865Z","level":"info","event":"   ticket_id customer_id   category  ... agent_id   region satisfaction_score","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.137094Z","level":"info","event":"0   TKT-1001    CUST-194    Account  ...     A102    South                NaN","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.137152Z","level":"info","event":"1   TKT-1002    CUST-111    Product  ...     A101    North                NaN","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.137205Z","level":"info","event":"2   TKT-1003    CUST-164    Product  ...     A105    South                NaN","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.137251Z","level":"info","event":"3   TKT-1004    CUST-153  Technical  ...     A105     East                NaN","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.137298Z","level":"info","event":"4   TKT-1005    CUST-189   Shipping  ...     A103    South                NaN","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.137340Z","level":"info","event":"5   TKT-1006    CUST-111   Shipping  ...     A103     East                NaN","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.137384Z","level":"info","event":"6   TKT-1007    CUST-193   Shipping  ...     A104    North                NaN","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.137424Z","level":"info","event":"7   TKT-1008    CUST-146    Product  ...     A106    North                NaN","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.137463Z","level":"info","event":"8   TKT-1009    CUST-198    Account  ...     A102    North                NaN","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.137502Z","level":"info","event":"9   TKT-1010    CUST-120    Account  ...     A102     East                1.0","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.137543Z","level":"info","event":"10  TKT-1011    CUST-168  Technical  ...     A104     West                NaN","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.137578Z","level":"info","event":"11  TKT-1012    CUST-128    Account  ...     A102    North                NaN","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.137616Z","level":"info","event":"12  TKT-1013    CUST-108  Technical  ...     A102     West                4.0","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.137654Z","level":"info","event":"13  TKT-1014    CUST-133  Technical  ...     A106  Central                5.0","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.137693Z","level":"info","event":"14  TKT-1015    CUST-154    Product  ...     A103    South                NaN","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.137748Z","level":"info","event":"15  TKT-1016    CUST-196    Billing  ...     A102    South                4.0","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.137788Z","level":"info","event":"16  TKT-1017    CUST-176   Shipping  ...     A105    North                1.0","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.137827Z","level":"info","event":"17  TKT-1018    CUST-114    Account  ...     A102     West                1.0","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.137865Z","level":"info","event":"18  TKT-1019    CUST-197  Technical  ...     A106     East                5.0","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.137903Z","level":"info","event":"19  TKT-1020    CUST-147  Technical  ...     A105     East                NaN","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.137948Z","level":"info","event":"20  TKT-1021    CUST-146    Account  ...     A101    South                NaN","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.137986Z","level":"info","event":"21  TKT-1022    CUST-110   Shipping  ...     A105    South                NaN","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.138029Z","level":"info","event":"22  TKT-1023    CUST-121    Account  ...     A102  Central                2.0","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.138067Z","level":"info","event":"23  TKT-1024    CUST-156    Product  ...     A101    South                2.0","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.138105Z","level":"info","event":"24  TKT-1025    CUST-175    Product  ...     A105    South                NaN","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.138145Z","level":"info","event":"25  TKT-1026    CUST-129    Billing  ...     A103    North                NaN","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.138179Z","level":"info","event":"26  TKT-1027    CUST-127    Product  ...     A106  Central                5.0","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.138214Z","level":"info","event":"27  TKT-1028    CUST-124    Billing  ...     A106     West                3.0","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.138253Z","level":"info","event":"28  TKT-1029    CUST-186    Billing  ...     A104     East                1.0","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.138291Z","level":"info","event":"29  TKT-1030    CUST-168   Shipping  ...     A104    South                NaN","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.138330Z","level":"info","event":"30  TKT-1031    CUST-109   Shipping  ...     A101  Central                NaN","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.138368Z","level":"info","event":"31  TKT-1032    CUST-196  Technical  ...     A104     West                NaN","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.138406Z","level":"info","event":"32  TKT-1033    CUST-121   Shipping  ...     A104     East                4.0","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.138443Z","level":"info","event":"33  TKT-1034    CUST-184   Shipping  ...     A102     East                NaN","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.138481Z","level":"info","event":"34  TKT-1035    CUST-194    Product  ...     A106     East                NaN","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.138524Z","level":"info","event":"35  TKT-1036    CUST-161    Product  ...     A101  Central                NaN","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.138557Z","level":"info","event":"36  TKT-1037    CUST-176    Billing  ...     A104    North                NaN","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.138590Z","level":"info","event":"37  TKT-1038    CUST-174    Product  ...     A105    North                NaN","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.138623Z","level":"info","event":"38  TKT-1039    CUST-172    Product  ...     A103    South                NaN","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.138668Z","level":"info","event":"39  TKT-1040    CUST-133   Shipping  ...     A106     East                4.0","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.138702Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.138738Z","level":"info","event":"[40 rows x 10 columns]","logger":"task.stdout"}
+{"timestamp":"2026-09-29T16:13:49.140767Z","level":"info","event":"Done. Returned value was: /Users/prse/PycharmProjects/Airflow_Prac/data/cleaned_step.csv","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-09-29T16:13:49.140906Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('01a0edf0-a67a-7d6a-aec2-71daa7e451f2'), task_id='clean', dag_id='full_taskflow_logic', run_id='scheduled__2026-09-29T00:00:00+00:00', try_number=1, dag_version_id=UUID('01a03a46-6b84-739f-96ca-6f29b35111c5'), map_index=-1, hostname='priyankas-macbook-air.local', context_carrier={'traceparent': '00-d36efa80b50b0bc494b1c52b7fb3daf3-0628375964792d9e-01'}, task=<Task(_PythonDecoratedOperator): clean>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 9, 29, 16, 13, 48, 154561, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None, sentry_integration='')","logger":"task","filename":"task_runner.py","lineno":1724}
