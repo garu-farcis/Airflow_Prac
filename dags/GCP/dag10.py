@@ -11,6 +11,8 @@ from datetime import datetime, timedelta
 from airflow.models import Variable
 from airflow.sdk import dag, task
 from airflow.providers.google.cloud.hooks.spanner import SpannerHook
+from airflow.providers.google.cloud.hooks.bigquery import BigQueryHook
+
 from airflow.providers.google.cloud.operators.spanner import SpannerDeployInstanceOperator
 from airflow.providers.google.cloud.transfers.gcs_to_bigquery import GCSToBigQueryOperator
 from google.cloud import spanner
@@ -50,6 +52,7 @@ def myspanner_dag():
     )
     get_data=GCSToBigQueryOperator(
         task_id='getting_data_from_gcs',
+        bucket='{{var.value.gcs_data_bucket}}',
         gcp_conn_id=GCP_CONN_ID,
         source_objects='{{var.value.gcs_path_id}}',
         source_format='CSV',
@@ -59,4 +62,13 @@ def myspanner_dag():
         write_disposition='WRITE_EMPTY'
     )
 
-    @task(task_id='read_data')
+    @task(task_id='data_quality_gate')
+    def data_quality_gate():
+        hook=BigQueryHook(gcp_conn_id=GCP_CONN_ID)
+        data=hook.get_client(project_id=PROJECT_ID)
+        query=f"select * from `{PROJECT_ID}.my_dataset.customer_metrics` "
+        df=data.query(query).to_dataframe()
+        # checks
+        clean_values=[]
+        error_values=[]
+
