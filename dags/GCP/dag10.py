@@ -17,7 +17,7 @@ from airflow.providers.google.cloud.operators.spanner import SpannerDeployInstan
 from airflow.providers.google.cloud.transfers.gcs_to_bigquery import GCSToBigQueryOperator
 from google.cloud import spanner
 from google.cloud.spanner_v1 import param_types
-
+from pyarrow import nulls
 
 GCP_CONN_ID = 'google_cloud_default'
 INSTANCE_ID = '{{var.value.gcp_instance_id}}'
@@ -71,4 +71,12 @@ def myspanner_dag():
         # checks
         clean_values=[]
         error_values=[]
-
+        # check null status
+        mask_null=df['status'].isnull
+        for _,rows in df[mask_null].iterrows():
+            error_values.append(
+                int(rows['cust_id']),
+                str(rows['cust_name']),
+                str(rows['status']),
+                str(rows['address'])
+            )
